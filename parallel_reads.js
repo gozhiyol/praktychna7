@@ -4,7 +4,7 @@ const path = require('path');
 
 const port = process.argv[2];
 
-// 1. Зберігаємо шлях до робочої директорії
+// Зберігаємо шлях до робочої директорії
 const baseDir = process.cwd();
 
 const server = http.createServer(async (req, res) => {
