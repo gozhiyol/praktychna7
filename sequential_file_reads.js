@@ -4,11 +4,8 @@ const path = require('path');
 
 const port = process.argv[2];
 
-// 1. Фіксуємо шлях до папки з файлами
+// Фіксуємо шлях до папки з файлами
 const baseDir = process.cwd();
-
-// 2. Наш фірмовий анти-EPERM трюк
-process.chdir('C:\\');
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/sequential') {
