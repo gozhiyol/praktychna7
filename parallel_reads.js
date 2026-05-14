@@ -7,9 +7,6 @@ const port = process.argv[2];
 // 1. Зберігаємо шлях до робочої директорії
 const baseDir = process.cwd();
 
-// 2. Змінюємо директорію для уникнення блокування Windows (EPERM)
-process.chdir('C:\\');
-
 const server = http.createServer(async (req, res) => {
   if (req.method === 'GET' && req.url === '/parallel') {
     const startTime = Date.now();
