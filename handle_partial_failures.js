@@ -5,9 +5,6 @@ const path = require('path');
 const port = process.argv[2];
 const baseDir = process.cwd();
 
-// Анти-EPERM трюк для Windows
-process.chdir('C:\\');
-
 const server = http.createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/error-handling') {
     let body = '';
